@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:track_signal/helper/constant.dart';
+import 'package:track_signal/views/controll.dart';
 import 'package:track_signal/widgets/CustomButton.dart';
 import 'package:track_signal/widgets/custom_text.dart';
 import 'package:track_signal/widgets/custom_text_form_field.dart';
@@ -109,7 +111,7 @@ class RegisterView extends StatelessWidget {
                     text: "Sign Up",
                     buttonRadius: 10,
                     onClick: (){
-
+                      Get.to(HomeView());
                     },
                     buttonWidth: size.width,
                     buttonHeight: size.height * 0.06,

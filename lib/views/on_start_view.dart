@@ -7,6 +7,8 @@ import 'package:track_signal/views/register_view.dart';
 import 'package:track_signal/widgets/CustomButton.dart';
 import 'package:track_signal/widgets/custom_text.dart';
 
+import 'feedback_view.dart';
+
 class OnStartView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -161,10 +163,15 @@ class OnStartView extends StatelessWidget {
               ),
             ) ,
             SizedBox(height: size.height * 0.03,),
-            CustomText(
-              text: "Continue without account",
-              fontColor: Color(0xffC5C5C5),
-              fontSize: 18,
+            InkWell(
+              onTap: (){
+                Get.to(FeedbackView()) ;
+              },
+              child: CustomText(
+                text: "Continue without account",
+                fontColor: Color(0xffC5C5C5),
+                fontSize: 18,
+              ),
             ),
             SizedBox(height: size.height * 0.03,),
 
