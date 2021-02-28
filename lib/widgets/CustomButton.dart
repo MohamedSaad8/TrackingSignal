@@ -12,9 +12,10 @@ class CustomButton extends StatelessWidget {
   final Color buttonColor ;
   final Color borderColor;
   final Color textColor ;
+  final double buttonFontSize ;
 
 
-  CustomButton({this.textColor,this.buttonWidth, this.buttonHeight, this.buttonRadius , this.onClick , this.text , this.borderColor , this.buttonColor});
+  CustomButton({this.buttonFontSize = 20,this.textColor,this.buttonWidth, this.buttonHeight, this.buttonRadius , this.onClick , this.text , this.borderColor , this.buttonColor});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class CustomButton extends StatelessWidget {
           text: text,
           fontColor: textColor,
           fontWeight: FontWeight.bold,
-          fontSize: 20,
+          fontSize: buttonFontSize,
         ),
       ),
     );

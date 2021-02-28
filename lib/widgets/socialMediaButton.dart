@@ -12,9 +12,10 @@ class SocialMediaButton extends StatelessWidget {
   final Color borderColor;
   final Color textColor ;
   final Widget buttonIcon ;
+  final double buttonTextFontSize ;
 
 
-  SocialMediaButton({this.buttonIcon,this.textColor,this.buttonWidth, this.buttonHeight, this.buttonRadius , this.onClick , this.text , this.borderColor , this.buttonColor});
+  SocialMediaButton({this.buttonTextFontSize = 20,this.buttonIcon,this.textColor,this.buttonWidth, this.buttonHeight, this.buttonRadius , this.onClick , this.text , this.borderColor , this.buttonColor});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class SocialMediaButton extends StatelessWidget {
               text: text,
               fontColor: textColor,
               fontWeight: FontWeight.bold,
-              fontSize: 20,
+              fontSize: buttonTextFontSize,
               textAlignment: Alignment.centerLeft,
             ),
           ],

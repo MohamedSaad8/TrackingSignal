@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:track_signal/helper/constant.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final Function validator;
@@ -39,46 +40,50 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      validator: validator,
-      onSaved: onSave,
-      obscureText: obscureText,
-      keyboardType: keyboardType,
-      cursorColor: cursorColor,
-      decoration: InputDecoration(
-        contentPadding: EdgeInsets.all(padding),
-        hintText: hintText,
-        hintStyle: TextStyle(
-          fontFamily: "Cairo",
-          fontSize: 20,
-          color: Color(0xffC5C5C5),
+    return Container(
+      height: 50.h,
+      width: 375.w,
+      child: TextFormField(
+        validator: validator,
+        onSaved: onSave,
+        obscureText: obscureText,
+        keyboardType: keyboardType,
+        cursorColor: cursorColor,
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.all(padding),
+          hintText: hintText,
+          hintStyle: TextStyle(
+            fontFamily: "Cairo",
+            fontSize: 20,
+            color: Color(0xffC5C5C5),
 
-        ),
-        suffixIcon: withSuffixIcon
-            ? Icon(
-                Icons.remove_red_eye_outlined,
-                color: Color(0xff757575),
-              )
-            : Container(
-                width: 0,
-                height: 0,
-              ),
-        prefixIcon: prefixIcon ,
-        filled: filled,
-        fillColor: fillColor,
-        border: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: borderColor,
-            width: borderWidth,
           ),
-          borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: focusedBorderColor,
-            width: borderWidth,
+          suffixIcon: withSuffixIcon
+              ? Icon(
+                  Icons.remove_red_eye_outlined,
+                  color: Color(0xff757575),
+                )
+              : Container(
+                  width: 0,
+                  height: 0,
+                ),
+          prefixIcon: prefixIcon ,
+          filled: filled,
+          fillColor: fillColor,
+          border: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: borderColor,
+              width: borderWidth,
+            ),
+            borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
           ),
-          borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: focusedBorderColor,
+              width: borderWidth,
+            ),
+            borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
+          ),
         ),
       ),
     );

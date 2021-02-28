@@ -7,6 +7,7 @@ import 'package:track_signal/widgets/CustomButton.dart';
 import 'package:track_signal/widgets/custom_text.dart';
 import 'package:track_signal/widgets/custom_text_form_field.dart';
 import 'package:track_signal/widgets/socialMediaButton.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RegisterView extends StatelessWidget {
   @override
@@ -24,7 +25,7 @@ class RegisterView extends StatelessWidget {
           "Sign Up" ,
           style: TextStyle(
               color: kMainColor,
-              fontSize: 27,
+              fontSize: 27.sp,
               fontWeight: FontWeight.bold,
               fontFamily: "Cairo"
           ),),
@@ -108,6 +109,7 @@ class RegisterView extends StatelessWidget {
                 child: Container(
                   height: size.height * 0.06 ,
                   child: CustomButton(
+                    buttonFontSize: 20.sp,
                     text: "Sign Up",
                     buttonRadius: 10,
                     onClick: (){
@@ -131,7 +133,7 @@ class RegisterView extends StatelessWidget {
                     child: CustomText(
                       text: "OR",
                       fontColor: Color(0xffC5C5C5),
-                      fontSize: 20,
+                      fontSize: 20.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -144,6 +146,7 @@ class RegisterView extends StatelessWidget {
                 child: Container(
                   height: size.height * 0.06 ,
                   child: SocialMediaButton(
+                    buttonTextFontSize: 20.sp,
                     text: "Continue with Facebook",
                     buttonRadius: 10,
                     onClick: (){
@@ -168,6 +171,7 @@ class RegisterView extends StatelessWidget {
                   height: size.height * 0.06 ,
                   child: SocialMediaButton(
                     text: "Continue with Google",
+                    buttonTextFontSize: 20.sp,
                     buttonRadius: 10,
                     onClick: (){
 

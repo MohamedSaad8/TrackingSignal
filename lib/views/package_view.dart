@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:track_signal/helper/constant.dart';
 import 'package:track_signal/widgets/custom_text.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PackageView extends StatelessWidget {
   @override
@@ -43,13 +44,13 @@ class PackageView extends StatelessWidget {
                           children: [
                             CustomText(
                               text: "Souq.com",
-                              fontSize: 18,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.bold,
                               fontColor: Colors.black,
                             ),
                             CustomText(
                               text: "..4881",
-                              fontSize: 18,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.bold,
                               fontColor: Colors.black,
                             ),
@@ -69,7 +70,7 @@ class PackageView extends StatelessWidget {
                                 ),
                                 CustomText(
                                   text: "Delivered Feb 6",
-                                  fontSize: 14,
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.normal,
                                   fontColor: Color(0xffAFAFAF),
                                 ),
@@ -83,7 +84,7 @@ class PackageView extends StatelessWidget {
                                 ),
                                 CustomText(
                                   text: "Cairo, Egypt",
-                                  fontSize: 14,
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.normal,
                                   fontColor: Color(0xffAFAFAF),
                                 ),

@@ -1,9 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:track_signal/helper/constant.dart';
+import 'package:track_signal/views/feedback_view.dart';
 import 'package:track_signal/views/package_view.dart';
 import 'package:track_signal/views/track_view.dart';
 import 'package:track_signal/widgets/custom_text.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class HomeView extends StatefulWidget {
   @override
@@ -79,13 +83,18 @@ class _HomeViewState extends State<HomeView> with SingleTickerProviderStateMixin
           child: CustomText(
             text: "0 pts",
             fontColor: Color(0xffDABD2A),
-            fontSize: 20,
+            fontSize: 20.sp,
             fontWeight: FontWeight.bold,
           ),
         ) ,
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Icon(Icons.settings , color: kMainColor,),
+        InkWell(
+          onTap: (){
+
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Icon(Icons.settings , color: kMainColor,),
+          ),
         ) ,
       ];
   }
@@ -106,13 +115,13 @@ class _HomeViewState extends State<HomeView> with SingleTickerProviderStateMixin
         CustomText(
           text:  "Track",
           fontWeight: FontWeight.bold,
-          fontSize: 27,
+          fontSize: 27.sp,
           fontColor: Color(0xff474747),
         ),
         CustomText(
           text:  "Signal",
           fontWeight: FontWeight.bold,
-          fontSize: 27,
+          fontSize: 27.sp,
           fontColor: kMainColor,
         )
       ],
